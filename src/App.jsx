@@ -11,12 +11,12 @@ import {
 import Search from "../client/pages/Search";
 import ImageDetail from "../client/pages/ImageDetail";
 import ErrorPage from "./error-page";
-import Header from "../client/pages/Header";
+import MainScreen from "../client/pages/MainScreen";
 
 const App = () => {
   let router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Header />} errorElement={<ErrorPage />}>
+      <Route path="/" element={<MainScreen />} errorElement={<ErrorPage />}>
         <Route path="/" element={<Search />} />
         <Route path="/imagedetail" element={<ImageDetail />} />
       </Route>

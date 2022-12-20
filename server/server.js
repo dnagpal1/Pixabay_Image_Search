@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 3000;
+const apiRouter = require("./routes/apiRouter");
 
 /**
  * Handle parsing request body
@@ -24,7 +25,7 @@ if (process.env.NODE_ENV === "production") {
  * define route handlers
  */
 
-// app.use("/api", apiRouter);
+app.use("/api", apiRouter);
 
 /**
  * catch-all for unknown routes
